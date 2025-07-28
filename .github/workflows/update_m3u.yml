@@ -3,7 +3,7 @@ name: Auto Update M3U
 on:
   schedule:
     - cron: '0 0 * * *'  # 每天 00:00 UTC（马来西亚时间 08:00）
-  workflow_dispatch:     # 手动触发也可以
+  workflow_dispatch:
 
 jobs:
   update:
@@ -18,6 +18,9 @@ jobs:
       with:
         python-version: '3.x'
 
+    - name: Install dependencies
+      run: pip install requests
+
     - name: Run script
       run: python generate_m3u.py
 
@@ -25,6 +28,6 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add myfile.m3u
+        git add playlist.m3u
         git commit -m "📺 Auto update m3u on $(date)"
         git push
