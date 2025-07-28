@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://example.com/logo_aec.png",Astro AEC
-https://linearjitp-playback.astro.com.my/dash-wv/linear/5016/default_ott.mpd
-#EXTINF:-1 tvg-logo="https://example.com/logo_awani.png",Astro Awani
-https://linearjitp-playback.astro.com.my/dash-wv/linear/5004/default_ott.mpd
+#EXTINF:-1 tvg-id="astro_awani" tvg-name="Astro Awani" tvg-logo="https://example.com/logo/awani.png" group-title="News",Astro Awani
+http://stream.example.com/awani.m3u8
+#EXTINF:-1 tvg-id="astro_ria" tvg-name="Astro Ria" tvg-logo="https://example.com/logo/ria.png" group-title="Entertainment",Astro Ria
+http://stream.example.com/ria.m3u8
