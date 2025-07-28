@@ -1,29 +1,54 @@
+import requests
+import re
 import json
-from datetime import datetime
 
-def generate_entry(channel):
-    return f"""#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={{ "keys":[ {{ "kty":"oct", "k":"{channel['license_key']}", "kid":"{channel['kid']}" }} ], "type":"temporary" }}
-#EXTINF:-1 tvg-id="{channel['name']}" tvg-name="{channel['name']}" tvg-logo="{channel['logo']}" group-title="Astro",{channel['name']}
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; ...) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36
-https://linearjitp-playback.astro.com.my/dash-wv/linear/{channel['channel_id']}/default_ott.mpd
-"""
+def fetch_valid_channels(m3u_url):
+    response = requests.get(m3u_url)
+    if response.status_code != 200:
+        raise Exception(f"下载失败，状态码：{response.status_code}")
 
-def main():
-    with open("astro_channels.json", "r", encoding="utf-8") as f:
-        channels = json.load(f)
+    lines = response.text.splitlines()
+    channels = []
+    channel = {}
 
-    m3u_content = "#EXTM3U\n"
-    for channel in channels:
-        m3u_content += generate_entry(channel) + "\n"
+    for line in lines:
+        line = line.strip()
 
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    m3u_content += f"# Generated on {timestamp}\n"
+        if line.startswith("#KODIPROP:inputstream.adaptive.license_key="):
+            channel["license"] = {
+                "type": "clearkey",
+                "key": "your_base64_key_here",
+                "kid": "your_base64_kid_here"
+            }
 
-    with open("output/astro.m3u", "w", encoding="utf-8") as f:
-        f.write(m3u_content)
+        elif line.startswith("#EXTINF"):
+            match = re.search(
+                r'tvg-id="([^"]+)" tvg-name="([^"]+)" tvg-logo="([^"]+)" group-title="([^"]+)",(.+)',
+                line
+            )
+            if match:
+                channel["id"] = match.group(1)
+                channel["name"] = match.group(2)
+                channel["logo"] = match.group(3)
+                channel["group"] = match.group(4)
 
-    print("✅ astro.m3u 已生成")
+        elif line.startswith("http") and ".mpd" in line:
+            try:
+                test = requests.head(line, timeout=5)
+                if test.status_code == 200:
+                    channel["url"] = line
+                    channels.append(channel)
+            except:
+                pass
+            channel = {}
+
+    return channels
 
 if __name__ == "__main__":
-    main()
+    m3u_url = "https://raw.githubusercontent.com/kfwong3030/autobot/refs/heads/main/myfile.m3u"
+    valid_channels = fetch_valid_channels(m3u_url)
+
+    with open("astro_channels.json", "w", encoding="utf-8") as f:
+        json.dump(valid_channels, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ 已成功生成 astro_channels.json，共 {len(valid_channels)} 个有效频道")
