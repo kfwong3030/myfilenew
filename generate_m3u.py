@@ -1,46 +1,29 @@
-import os
+import json
+from datetime import datetime
 
-# 示例频道列表（你可以替换为从 API 或网页抓取的内容）
-channels = [
-    {
-        "id": "astro_awani",
-        "name": "Astro Awani",
-        "logo": "https://example.com/logo/awani.png",
-        "group": "News",
-        "url": "http://stream.example.com/awani.m3u8"
-    },
-    {
-        "id": "astro_ria",
-        "name": "Astro Ria",
-        "logo": "https://example.com/logo/ria.png",
-        "group": "Entertainment",
-        "url": "http://stream.example.com/ria.m3u8"
-    }
-]
+def generate_entry(channel):
+    return f"""#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={{ "keys":[ {{ "kty":"oct", "k":"{channel['license_key']}", "kid":"{channel['kid']}" }} ], "type":"temporary" }}
+#EXTINF:-1 tvg-id="{channel['name']}" tvg-name="{channel['name']}" tvg-logo="{channel['logo']}" group-title="Astro",{channel['name']}
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; ...) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36
+https://linearjitp-playback.astro.com.my/dash-wv/linear/{channel['channel_id']}/default_ott.mpd
+"""
 
-def generate_m3u_content(channels):
-    lines = ["#EXTM3U"]
+def main():
+    with open("astro_channels.json", "r", encoding="utf-8") as f:
+        channels = json.load(f)
+
+    m3u_content = "#EXTM3U\n"
     for channel in channels:
-        lines.append(
-            f"#EXTINF:-1 tvg-id=\"{channel['id']}\" tvg-name=\"{channel['name']}\" "
-            f"tvg-logo=\"{channel['logo']}\" group-title=\"{channel['group']}\",{channel['name']}"
-        )
-        lines.append(channel['url'])
-    return "\n".join(lines)
+        m3u_content += generate_entry(channel) + "\n"
 
-new_content = generate_m3u_content(channels)
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    m3u_content += f"# Generated on {timestamp}\n"
 
-# 如果文件已存在，读取旧内容
-if os.path.exists("playlist.m3u"):
-    with open("playlist.m3u", "r", encoding="utf-8") as f:
-        old_content = f.read()
-else:
-    old_content = ""
+    with open("output/astro.m3u", "w", encoding="utf-8") as f:
+        f.write(m3u_content)
 
-# 只有内容变更才写入
-if new_content != old_content:
-    with open("playlist.m3u", "w", encoding="utf-8") as f:
-        f.write(new_content)
-    print("[✓] M3U 文件已更新：playlist.m3u")
-else:
-    print("[ℹ️] M3U 文件无变更，跳过写入")
+    print("✅ astro.m3u 已生成")
+
+if __name__ == "__main__":
+    main()
