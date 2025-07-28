@@ -1,0 +1,20 @@
+#EXTM3U
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"your_base64_key_here", "kid":"your_base64_kid_here" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Astro Awani" tvg-name="Astro Awani" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/9e/Astro_Awani_logo.png" group-title="Astro",Astro Awani
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; ...) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36
+https://linearjitp-playback.astro.com.my/dash-wv/linear/5016/default_ott.mpd
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"your_base64_key_here", "kid":"your_base64_kid_here" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Astro AEC" tvg-name="Astro AEC" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2e/Astro_AEC_logo.png" group-title="Astro",Astro AEC
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; ...) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36
+https://linearjitp-playback.astro.com.my/dash-wv/linear/3060/default_ott.mpd
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"your_base64_key_here", "kid":"your_base64_kid_here" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Astro Ria" tvg-name="Astro Ria" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6f/Astro_Ria_logo.png" group-title="Astro",Astro Ria
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; ...) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36
+https://linearjitp-playback.astro.com.my/dash-wv/linear/1040/default_ott.mpd
+
+# Generated on 2025-07-28 05:02:29
