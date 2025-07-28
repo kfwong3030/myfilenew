@@ -1,39 +1,28 @@
-name: Auto Update M3U
+# .github/workflows/update_m3u.yml
+name: Update Astro M3U
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 每天马来西亚时间上午10点运行（UTC+8）
-  workflow_dispatch:     # 允许手动触发
+    - cron: '0 2 * * *'  # 每天马来西亚时间上午10点运行
+  workflow_dispatch:
 
 jobs:
-  update-m3u:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-
-      - name: Install dependencies (if any)
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt || true
+      - name: Generate M3U
+        run: python astro_channels/generate_m3u.py
+      - name: Commit and Push
         run: |
-          pip install --upgrade pip
-          # 如果你有 requests 或其他库，可以加上：
-          # pip install requests beautifulsoup4
-
-      - name: Run generate_m3u.py
-        run: python generate_m3u.py
-
-      - name: Configure Git identity
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push if playlist.m3u changed
-        run: |
-          git add playlist.m3u
-          git diff --cached --quiet || git commit -m "📺 Auto update M3U on $(date)"
+          git config user.name "KwokBot"
+          git config user.email "kwok@example.com"
+          git add astro_channels/output/astro.m3u
+          git commit -m "Update M3U $(date)"
           git push
