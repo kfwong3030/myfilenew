@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://example.com/logo_aec.png",Astro AEC
+https://linearjitp-playback.astro.com.my/dash-wv/linear/5016/default_ott.mpd
+#EXTINF:-1 tvg-logo="https://example.com/logo_awani.png",Astro Awani
+https://linearjitp-playback.astro.com.my/dash-wv/linear/5004/default_ott.mpd
