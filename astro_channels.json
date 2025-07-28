@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Astro Awani",
+    "channel_id": "5016",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Astro_Awani_logo.png",
+    "license_key": "your_base64_key_here",
+    "kid": "your_base64_kid_here"
+  },
+  {
+    "name": "Astro AEC",
+    "channel_id": "3060",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Astro_AEC_logo.png",
+    "license_key": "your_base64_key_here",
+    "kid": "your_base64_kid_here"
+  }
+  // 可继续添加更多频道
+]
