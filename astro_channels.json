@@ -1,23 +1,406 @@
 [
   {
-    "name": "Astro Awani",
-    "channel_id": "5016",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Astro_Awani_logo.png",
-    "license_key": "your_base64_key_here",
-    "kid": "your_base64_kid_here"
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://a122aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/pwdvd9fm5u/out/v1/5e22845dab3648b8a7033fd5923d62d1/cenc.mpd"
   },
   {
-    "name": "Astro AEC",
-    "channel_id": "3060",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Astro_AEC_logo.png",
-    "license_key": "your_base64_key_here",
-    "kid": "your_base64_kid_here"
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://a36aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/6fbnr3ei4b/out/v1/57d2ae96a4cc4230881cd801b389edf6/cenc.mpd"
   },
   {
-    "name": "Astro Ria",
-    "channel_id": "1040",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Astro_Ria_logo.png",
-    "license_key": "your_base64_key_here",
-    "kid": "your_base64_kid_here"
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://a83aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/gigxsk0lya/out/v1/df75d887bce4437b8fdf345ae455113b/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://dck-ac-live.cdn.indazn.com/dash/dazn-linear-580/stream.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://dck-ac-live.cdn.indazn.com/dash/dazn-linear-581/stream.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://dck-ac-live.cdn.indazn.com/dash/dazn-linear-582/stream.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://dck-ac-live.cdn.indazn.com/dash/dazn-linear-583/stream.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/f0qvkrra8j/out/v1/f8fa17f087564f51aa4d5c700be43ec4/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/i2pcjr4pe5/out/v1/912e9db56d75403b8a9ac0a719110f36/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/SIN/live/dash/enc/gesdwrdncn/out/v1/79e752f1eccd4e18b6a8904a0bc01f2d/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/SIN/live/dash/enc/fpndxmzw6o/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/u142pfptsm/out/v1/1caa3b2dfa9e448d8f61209bdfc1acdc/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/v5v9yfn62i/out/v1/0991e33d09da46b2857fcc845db95c40/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/mrskysvotx/out/v1/ad58961bd8fd48d2944e461c034b8914/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/irtfdsri14/out/v1/165128c314e944faa3d79e107974b323/cenc.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/mttgh1c4ei/out/v1/9cc664b146744e2ba23066aa048efbc5/cenc.mpd"
+  },
+  {
+    "url": "https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd"
+  },
+  {
+    "url": "https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://unifi-live08.secureswiftcontent.com/UnifiHD/live08.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "id": "TV9",
+    "name": "TV9",
+    "logo": "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/48_144.png",
+    "group": "Malaysia",
+    "url": "https://unifi-live09.secureswiftcontent.com/UnifiHD/live09.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "id": "113.unifi",
+    "name": "Salam HD",
+    "logo": "http://playtv.unifi.com.my:7040/CPS/images/universal/film/logo/201907/20190716/20190716062504007e6f.png",
+    "group": "Malaysia",
+    "url": "https://unifi-live09.secureswiftcontent.com/UnifiHD/live32.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://unifi-live09.secureswiftcontent.com/UnifiHD/live31.mpd"
+  },
+  {
+    "url": "https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd?id=1"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://unifi-live07.secureswiftcontent.com/UnifiHD/live11.mpd"
+  },
+  {
+    "url": "https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd?id=1"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://unifi-live07.secureswiftcontent.com/UnifiHD/live11.mpd"
+  },
+  {
+    "id": "GolfChannel.my",
+    "name": "Golf Channel HD",
+    "logo": "https://i.ibb.co/wW297RH/NBC-logo-svg.png",
+    "group": "Sports",
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://fsly.stream.peacocktv.com/Content/CMAF_OL1-CTR-4s/Live/channel(knbc)/master.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-1-enc.edgenextcdn.net/out/v1/c696e4819b55414388a1a487e8a45ca1/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-2-enc.edgenextcdn.net/out/v1/a16db2ec338a445a82d9c541cc9293f9/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-3-enc.edgenextcdn.net/out/v1/42e86125555242aaa2a12056832e7814/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-4-enc.edgenextcdn.net/out/v1/5267ea5772874b0db24559d643eaad93/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-5-enc.edgenextcdn.net/out/v1/99289eac5a7b4319905da595afbd792b/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-extra-1-enc.edgenextcdn.net/out/v1/647c58693f1d46af92bd7e69f17912cb/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-extra-2-enc.edgenextcdn.net/out/v1/8b70de2b70d447ba8a7450ba90926a2d/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-extra3-enc.edgenextcdn.net/out/v1/8f1c6c3f05ef4284a64b342891bd85ae/index.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://ssc-news-live-enc.edgenextcdn.net/out/v1/ef466f43623c4bbaa3f905b566ec35ea/index.mpd"
+  },
+  {
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/134/ochannel/manifest.mpd"
+  },
+  {
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/134/mentaritv/manifest.mpd"
+  },
+  {
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/133/net/manifest.mpd"
+  },
+  {
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/194/maxstream/manifest.mpd"
+  },
+  {
+    "id": "RCTI.id",
+    "name": "RCTI",
+    "logo": "https://i.ibb.co.com/n6c3rtV/20240903-001501.jpg",
+    "group": "Indonesia",
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://tglmp02.akamaized.net/out/v1/8c503a6966554d439035588f10505eee/manifest.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://tglmp02.akamaized.net/out/v1/423fa206c4ea458ebe83d6edd172eb10/manifest.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://tglmp03.akamaized.net/out/v1/151218455da04a47be327aa14be3e5cb/manifest.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://tglmp04.akamaized.net/out/v1/00ac947de8174a54bd0f52226115d1db/manifest.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://rest-as.ott.kaltura.com/api_v3/service/assetFile/action/playManifest/partnerId/147/assetId/237653/assetType/media/assetFileId/13229990/contextType/PLAYBACK/isAltUrl/False/a.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://unifi-live06.secureswiftcontent.com/UnifiHD/live06.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/133/dreamworks_dash/manifest_wuseetv_qRFZS.mpd"
+  },
+  {
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/130/duniaanak_dash/manifest.mpd"
+  },
+  {
+    "id": "ZooMoo.sg",
+    "name": "MY: ZooMoo Kids HD",
+    "logo": "https://i.imgur.com/ciTJrnl.png",
+    "group": "Kids",
+    "license": {
+      "type": "clearkey",
+      "key": "your_base64_key_here",
+      "kid": "your_base64_kid_here"
+    },
+    "url": "https://tglmp01.akamaized.net/out/v1/de55fad9216e4fe7ad8d2eed456ba1ec/manifest.mpd"
   }
 ]
