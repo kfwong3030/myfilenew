@@ -1,4 +1,4 @@
-name: Update Astro M3U
+name: Auto Update Astro Channels
 
 on:
   schedule:
@@ -6,17 +6,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Generate M3U
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run generate_m3u.py
         run: python generate_m3u.py
 
       - name: Configure Git
@@ -26,6 +31,6 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add output/astro.m3u
-          git diff --cached --quiet || git commit -m "Update M3U $(date)"
+          git add astro_channels.json
+          git diff --cached --quiet || git commit -m "Update Astro Channels $(date)"
           git push
