@@ -1,4 +1,3 @@
-# .github/workflows/update_m3u.yml
 name: Update Astro M3U
 
 on:
@@ -11,18 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - name: Install dependencies
-        run: pip install -r requirements.txt || true
+
       - name: Generate M3U
-        run: python astro_channels/generate_m3u.py
-      - name: Commit and Push
+        run: python generate_m3u.py
+
+      - name: Configure Git
         run: |
           git config user.name "KwokBot"
           git config user.email "kwok@example.com"
-          git add astro_channels/output/astro.m3u
-          git commit -m "Update M3U $(date)"
+
+      - name: Commit and Push
+        run: |
+          git add output/astro.m3u
+          git diff --cached --quiet || git commit -m "Update M3U $(date)"
           git push
